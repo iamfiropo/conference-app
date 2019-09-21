@@ -1,6 +1,6 @@
 export const ATTENDEES = [
   {
-    attendee_id: 1,
+    id: 1,
     email: 'test@test.com',
     first_name: 'Peace',
     last_name: 'Olowo',
