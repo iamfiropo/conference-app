@@ -1,4 +1,4 @@
-# Sales Management
+# Conference Management
 
 RESTful API for talks at a conference 
 
