@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import DatePicker from "react-datepicker";
 
-import "react-datepicker/dist/react-datepicker.css";
+import "./talk.styles.scss";
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -44,6 +43,7 @@ class Talk extends Component {
     
     return (
       <div className='talk'>
+        <h2 className='title'>Kindly register your talk here:</h2>
         <form onSubmit={this.handleSubmit}>
           <FormInput 
             name='title'
@@ -53,32 +53,23 @@ class Talk extends Component {
             handleChange={this.handleChange}
             required
           />
-          <DatePicker 
+          <FormInput 
             name='startTime'
-            type='startTime'
-            label='Start Time'
+            type='time'
             value={startTime}
-            selected={startTime}
+            label='Start Time'
             handleChange={this.handleChange}
-            showTimeSelect
-            showTimeSelectOnly
-            timeIntervals={15}
-            timeCaption="Time"
-            dateFormat="h:mm aa"
             required
           />
-          <DatePicker 
+          <FormInput 
             name='endTime'
-            selected={endTime}
+            type='time'
+            value={endTime}
+            label='End Time'
             handleChange={this.handleChange}
-            showTimeSelect
-            showTimeSelectOnly
-            timeIntervals={15}
-            timeCaption="Time"
-            dateFormat="h:mm aa"
             required
           />
-          <CustomButton type='submit'>Register</CustomButton>
+          <CustomButton type='submit'>REGISTER TALK</CustomButton>
         </form>        
       </div>
     )
