@@ -33,17 +33,6 @@ class Talk extends Component {
       title, startTime, endTime
     };
 
-    // axios({
-    //   method: 'post',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   url: '/talk',
-    //   data: talk
-    // })
-    // .then(() => alert('Successfully Created'))
-    // .catch(error => console.error(error));
-
     axios
       .post('/api/v1/talk', talk)
       .then(() => alert('Successfully Created'))
