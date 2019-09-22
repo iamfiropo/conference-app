@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "heroku-prebuild": "NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "start": "babel-node server.js",
     "client": "cd client && yarn start",
@@ -13,7 +14,9 @@
   "dependencies": {
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
@@ -21,9 +24,7 @@
     "@babel/register": "^7.6.0",
     "concurrently": "^4.1.2",
     "debug": "^4.1.1",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
   },
   "engines": {
