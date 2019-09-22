@@ -7,6 +7,7 @@ class TalkController {
   static async create(req, res) {
     try {
       const talk = req.body;
+      console.log('****************', talk);
       talk.id = TALKS.length + 1; 
       talk.created_on = new Date();
       const newTalk = new AttendeeModel({ ...talk });
