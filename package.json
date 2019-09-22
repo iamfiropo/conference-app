@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "heroku-prebuild": "NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false",
+    "heroku-prebuild": "NPM_CONFIG_PRODUCTION=true YARN_PRODUCTION=true",
     "heroku-postbuild": "cd client && yarn --only=dev && yarn && yarn run build",
     "start": "babel-node server.js",
     "client": "cd client && yarn start",
