@@ -1,6 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
 import path from 'path';
+import cors from 'cors';
 import 'regenerator-runtime/runtime';
 import Debug from 'debug';
 import { config } from 'dotenv';
@@ -15,6 +16,7 @@ app.use(logger('dev'));
 const debug = Debug('http');
 const port = process.env.PORT;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
