@@ -30,6 +30,10 @@ app.get('/api/v1', (req, res) => {
 const router = express.Router();
 app.use('/api/v1', Route(logger, router));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 app.listen(port, () => debug(`Server listening on port ${port}`));
 
 export default app;
