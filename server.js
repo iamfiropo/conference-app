@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
-app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({
@@ -31,6 +30,7 @@ app.get('/api/v1', (req, res) => {
 const router = express.Router();
 app.use('/api/v1', Route(logger, router));
 
+app.use(express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
