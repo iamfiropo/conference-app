@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "heroku-prebuild": "NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "heroku-postbuild": "cd client && yarn --only=dev && yarn && yarn run build",
     "start": "babel-node server.js",
     "client": "cd client && yarn start",
     "server": "nodemon --exec babel-node server.js",
