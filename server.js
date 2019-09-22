@@ -22,10 +22,10 @@ app.use(express.urlencoded({
   extended: false
 }));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({

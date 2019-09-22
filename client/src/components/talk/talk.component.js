@@ -33,10 +33,21 @@ class Talk extends Component {
       title, startTime, endTime
     };
 
-    axios
-      .post('/talk', talk)
-      .then(() => alert('Successfully Created'))
-      .catch(error => console.error(error));
+    axios({
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      url: '/talk',
+      data: talk
+    })
+    .then(() => alert('Successfully Created'))
+    .catch(error => console.error(error));
+
+    // axios
+    //   .post('/talk', talk)
+    //   .then(() => alert('Successfully Created'))
+    //   .catch(error => console.error(error));
   }
 
   render() {
