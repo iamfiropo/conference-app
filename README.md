@@ -25,6 +25,9 @@ RESTful API for talks at a conference
 
  > POST https://intelligent-conference.herokuapp.com/api/v1/conference - Can add an attendee to a talk
 
+## Links
+ > [Project Homepage](https://intelligent-conference.herokuapp.com/)
+
 ## Author
 
 > ##### ROPO JOHN OLATUJOYE 

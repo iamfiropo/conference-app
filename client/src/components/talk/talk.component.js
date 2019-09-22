@@ -34,7 +34,7 @@ class Talk extends Component {
 
     axios
       .post('/api/v1/talk', talk)
-      .then(() => alert('Successfully Created'))
+      .then(() => alert('Talk Added successfully'))
       .catch(error => console.error(error));
   }
 

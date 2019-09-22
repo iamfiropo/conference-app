@@ -33,6 +33,22 @@ $main-color: black;
     }
   }
 
+  .checkBoxStyle {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    transition: all 150ms;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      font-size: 14px;
+    }
+  }
+
   input[type='time'] {
     letter-spacing: 0.3em;
   }

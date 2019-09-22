@@ -7,6 +7,7 @@ class AttendeeController {
   static async create(req, res) {
     try {
       const attendee = req.body;
+      console.log('****************', attendee);
       attendee.id = ATTENDEES.length + 1; 
       attendee.created_on = new Date();
       const newAttendee = new AttendeeModel({ ...attendee });

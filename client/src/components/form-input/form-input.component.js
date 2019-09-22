@@ -2,11 +2,11 @@ import React from 'react';
 
 import './form-input.styles.scss';
 
-const FormInput = ({ label, handleChange, ...otherProps }) => (
+const FormInput = ({ checkBoxStyle, label, handleChange, handleCheckBoxChange, ...otherProps }) => (
   <div className='group'>
     <input 
-      className='form-input'
-      onChange={handleChange}
+      className={`${ checkBoxStyle ? 'checkBoxStyle' :'form-input' }`}
+      onChange={handleChange || handleCheckBoxChange}
       { ...otherProps }
     />
     {label ? (
