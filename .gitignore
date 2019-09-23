@@ -17,6 +17,7 @@ build/
 
 # production
 /build
+/client/build
 
 # misc
 .env.local
